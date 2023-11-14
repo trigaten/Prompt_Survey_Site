@@ -4,10 +4,12 @@ This is the official repository for the [HackAPrompt](https://trigaten.github.io
 
 If you find HackAPrompt useful for your work please cite:
 ```
-@misc{schulhoff2023ignore,
-title={Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition},
-author    = {Sander Schulhoff and Jeremy Pinto and Anaum Khan and Louis-François Bouchard and Chenglei Si and Svetlina Anati and Valen Tagliabue and Anson Liu Kost and Christopher Carnahan and Jordan Boyd-Graber},
-year={2023},
+@inproceedings{Schulhoff:Pinto:Khan:Bouchard:Si:Boyd-Graber:Anati:Tagliabue:Kost:Carnahan-2023,
+  Title = {Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs Through a Global Prompt Hacking Competition},
+  Author = {Sander V Schulhoff and Jeremy Pinto and Anaum Khan and Louis-FranÃ§ois Bouchard and Chenglei Si and Jordan Lee Boyd-Graber and Svetlina Anati and Valen Tagliabue and Anson Liu Kost and Christopher R Carnahan},
+  Booktitle = {Empirical Methods in Natural Language Processing},
+  Year = {2023},
+  Location = {Singapore}
 }
 ```
 
