@@ -1,4 +1,4 @@
-# Nerfies
+# HackAPrompt
 
 This is the official repository for the [HackAPrompt](https://trigaten.github.io/hackaprompt.github.io/HackAPrompt.pdf) paper.
 
