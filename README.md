@@ -4,11 +4,10 @@ This is the offu=icial repository for the [HackAPrompt](https://trigaten.github.
 
 If you find HackAPrompt useful for your work please cite:
 ```
-  park2021nerfies
-  author    = {Sander Schulhoff, Jeremy Pinto, Anaum Khan1, Louis-François Bouchard, Chenglei Si, Svetlina Anati, Valen Tagliabue, Anson Liu Kost, Christopher Carnahan, Jordan Boyd-Graber},
-  title     = {Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition},
-  journal   = {EMNLP},
-  year      = {2023},
+@misc{schulhoff2023ignore,
+title={Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition},
+author    = {Sander Schulhoff and Jeremy Pinto and Anaum Khan and Louis-François Bouchard and Chenglei Si and Svetlina Anati and Valen Tagliabue and Anson Liu Kost and Christopher Carnahan and Jordan Boyd-Graber},
+year={2023},
 }
 ```
 
