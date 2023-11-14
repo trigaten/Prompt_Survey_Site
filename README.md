@@ -1,14 +1,14 @@
 # Nerfies
 
-This is the repository that contains source code for the [Nerfies website](https://nerfies.github.io).
+This is the offu=icial repository for the [HackAPrompt](https://trigaten.github.io/hackaprompt.github.io/HackAPrompt.pdf) paper.
 
-If you find Nerfies useful for your work please cite:
+If you find HackAPrompt useful for your work please cite:
 ```
-@article{park2021nerfies
-  author    = {Park, Keunhong and Sinha, Utkarsh and Barron, Jonathan T. and Bouaziz, Sofien and Goldman, Dan B and Seitz, Steven M. and Martin-Brualla, Ricardo},
-  title     = {Nerfies: Deformable Neural Radiance Fields},
-  journal   = {ICCV},
-  year      = {2021},
+  park2021nerfies
+  author    = {Sander Schulhoff, Jeremy Pinto, Anaum Khan1, Louis-François Bouchard, Chenglei Si, Svetlina Anati, Valen Tagliabue, Anson Liu Kost, Christopher Carnahan, Jordan Boyd-Graber},
+  title     = {Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs through a Global Scale Prompt Hacking Competition},
+  journal   = {EMNLP},
+  year      = {2023},
 }
 ```
 
