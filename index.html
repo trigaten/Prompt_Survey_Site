@@ -83,28 +83,28 @@
                 <a style="color:#008AD7;font-weight:normal;">Sander Schulhoff<sup>*</sup></a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a style="color:#008AD7;font-weight:normal;">Jeremy Pinto<sup>*</sup></a><sup>1</sup>,
+                <a style="color:#c100d7;font-weight:normal;">Jeremy Pinto<sup>*</sup></a><sup>2</sup>,
               </span>
               <span class="author-block">
                 <a style="color:#008AD7;font-weight:normal;">Anaum Khan</a><sup>1</sup>,
               </span>
               <span class="author-block">
-                <a style="color:#008AD7;font-weight:normal;">Louis-François Bouchard</a><sup>1</sup>,
+                <a href="https://louisbouchard.ai/" style="color:#d7ac00;font-weight:normal;">Louis-François Bouchard</a><sup>2,3</sup>,
               </span>
               <span class="author-block">
-                <a href="https://noviscl.github.io/" style="color:#f68946;font-weight:normal;">Chenglei Si</a><sup>2</sup>,
+                <a href="https://noviscl.github.io/" style="color:#f68946;font-weight:normal;">Chenglei Si</a><sup>4</sup>,
               </span>
               <span class="author-block">
-                <a style="color:#008AD7;font-weight:normal;">Svetlina Anati</a><sup>1</sup>,
+                <a style="color:#f68946;font-weight:normal;">Svetlina Anati**</a><sup>4</sup>,
               </span>
               <span class="author-block">
-                <a style="color:#008AD7;font-weight:normal;">Valen Tagliabue</a><sup>1</sup>,
+                <a style="color:#9ed700;font-weight:normal;">Valen Tagliabue**</a><sup>5</sup>,
               </span>
               <span class="author-block">
-                <a style="color:#008AD7;font-weight:normal;">Anson Liu Kost</a><sup>1</sup>,
+                <a style="color:#00d788;font-weight:normal;">Anson Liu Kost**</a><sup>6</sup>,
               </span>
               <span class="author-block">
-                <a style="color:#008AD7;font-weight:normal;">Christopher Carnahan</a><sup>1</sup>,
+                <a style="color:#d7006b;font-weight:normal;">Christopher Carnahan**</a><sup>7</sup>,
               </span>
               <span class="author-block">
                 <a style="color:#008AD7;font-weight:normal;">Jordan Boyd-Graber</a><sup>1</sup>,
@@ -115,8 +115,14 @@
             <div class="is-size-5 publication-authors">
               <span class="author-block"><b style="color:#008AD7; font-weight:normal">▶ </b>University of
                 Maryland</span>
+              <span class="author-block"><b style="color:#c100d7; font-weight:normal">▶ </b>Mila</span>
+              <span class="author-block"><b style="color:#d7ac00; font-weight:normal">▶ </b>Towards AI</span>
               <span class="author-block"><b style="color:#f68946; font-weight:normal">▶ </b>Stanford University</span>
+              <span class="author-block"><b style="color:#9ed700; font-weight:normal">▶ </b>Technical University of Sofia</span>
+              <span class="author-block"><b style="color:#00d788; font-weight:normal">▶ </b>University of Milan</span>
+              <span class="author-block"><b style="color:#d7006b; font-weight:normal">▶ </b>NYU</span>
               <span class="author-block">&nbsp;&nbsp;<sup>*</sup>Equal Contribution</span>
+              <span class="author-block">&nbsp;&nbsp;<sup>**</sup>Competition Winner</span>
             </div>
 
             
@@ -134,22 +140,22 @@
 
               <!-- code Link. -->
               <span class="link-block">
-                <a href="https://github.com/swj0419/detect-pretrain-code" class="external-link button is-normal is-rounded is-dark">
+                <a href="https://www.aicrowd.com/challenges/hackaprompt-2023" class="external-link button is-normal is-rounded is-dark">
                   <span class="icon">
                     <i class="fab fa-github"></i>
                   </span>
-                  <span>Code</span>
+                  <span>Competition page</span>
                 </a>
               </span>
 
                 <!-- Dataset Link. -->
                 <span class="link-block">
-                  <a href="https://huggingface.co/datasets/swj0419/WikiMIA"
+                  <a href="https://huggingface.co/datasets/hackaprompt/hackaprompt-dataset"
                     class="external-link button is-normal is-rounded is-dark">
                     <span class="icon">
                       <i class="far fa-images"></i>
                     </span>
-                    <span>WikiMIA datasets</span>
+                    <span>HackAPrompt dataset</span>
                   </a>
                 </span>
 
@@ -167,26 +173,12 @@
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-  We propose <b>Min-K% Prob</b> <img src="static/images/min-k_icon.png" alt="Min-K icon" style="width:25px; height:25px;">, a
-  simple and effective method that can detect whether if a large language model (e.g., GPT-3) was pretrained on the provided
-  text without knowing the pretraining data.</b>
+        In this paper, we explore the vulnerability of Large Language Models (LLMs) to prompt hacking, where models are manipulated to follow malicious instructions. Through a global competition, we gathered over 600,000 adversarial prompts against three major LLMs, confirming their susceptibility to such attacks and categorizing these adversarial prompts into a comprehensive taxonomy.
   
-      <img src="./static/images/intro2.png" alt="teaser">
+      </b>
+  
 
-      
-
-
-<h3 class="subtitle">
-    <style>
-      .subtitle a {
-        color: blue;
-      }
-    </style>
-  Min-K% Prob is an effective tool for <b>benchmark example contamination detection</b>,
-  <a href="#privacy-auditing"><b>privacy auditing of machine unlearning</b></a>,
-  and <a href="#copyrighted-detection"><b>copyrighted text detection</b></a> in language models' pretraining
-  data.
-</h3>
+      <img src="./static/images/injection_example.svg" alt="teaser" style="margin-top: 40px;">
 
 
     </div>
@@ -201,48 +193,27 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Although large language models (LLMs) are widely deployed, the data used to train them is rarely disclosed.
-            Given the
-            incredible scale of this data, up to trillions of tokens, it's nearly certain it includes potentially
-            problematic
-            text such as copyrighted materials, personally identifiable information, and test data for widely reported
-            reference
-            benchmarks. However, we currently lack knowledge on which data of these types is included or in what
-            proportions.
-          </p>
+            Large Language Models (LLMs) are deployed in interactive contexts with
+direct user engagement, such as chatbots and writing assistants.
 
-           <li><b>Pretraining Ddata detection problem</b>. In this paper, we explore the pretraining data detection problem<span>&#x1F575;&#xFE0F;</span>: given a piece of
-            text and
-            black-box access to an LLM without knowing the pretraining data, can we determine if the model was trained
-            on the
-            provided text? 
-            
-            <li><b>Dynamic benchmark WikiMIA</b>. To aid this study, we present <b><a href="https://huggingface.co/datasets/swj0419/WikiMIA"
-                target="_blank">
-                a dynamic benchmark WikiMIA</a></b> <span>&#128214;</span> that uses data created both before and
-            after model training
-            to support gold truth detection.
+These deployments are vulnerable to prompt injection and jailbreaking
+(collectively, prompt hacking), in which models are manipulated to ignore
+their original instructions and follow potentially malicious
+ones.
 
-          <li><b>Detection method Min-K% Prob</b>. We also design a new <b><a href="https://github.com/swj0419/detect-pretrain-code" target="_blank">detection
-                method Min-K%
-                Prob</a></b> <img src="static/images/min-k_icon.png" alt="Min-K Icon" style="width:25px; height:25px;">. This is built
-            on a straightforward
-            hypothesis: an unobserved example is more likely to have a few outlier words with low probabilities under
-            the LLM,
-            while a recognized example is less inclined to contain words with such reduced probabilities. Min-K% Prob
-            operates
-            without any insight into the pretraining corpus or any extra training, distinguishing it from past detection
-            strategies
-            that necessitate educating a reference model on data analogous to the pretraining data. Furthermore, our
-            tests indicate
-            that Min-K% Prob delivers a 7.4% enhancement on WikiMIA relative to these preceding techniques. 
+Although widely acknowledged as a significant security threat, there is
+a dearth of large-scale resources and quantitative studies on prompt hacking.
 
-            <li><b>Real-life use cases</b>. We employ
-            Min-K% Prob in
-            three real-life contexts: <strong>benchmark example contamination detection</strong>,
-            <a href="#privacy-auditing"><strong>privacy auditing of machine unlearning</strong></a>,
-            and <a href="#copyrighted-detection"><strong>copyrighted text detection</strong></a> in language models' pretraining
-            data.
+
+To address this lacuna, we launch a global prompt hacking competition, which
+allows for free-form human input attacks. We elicit 600K+ adversarial prompts
+against three state-of-the-art LLMs.
+
+
+We describe the dataset, which empirically verifies that current LLMs can
+indeed be manipulated via prompt hacking. We also present a comprehensive
+taxonomical ontology of the types of adversarial prompts.
+
         </div>
       </div>
     </div>
@@ -256,28 +227,9 @@
     <!-- Abstract -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Detection Method Min-K% Prob</h2>
+        <h2 class="title is-3">Demo video</h2>
         <div class="content has-text-justified">
-          <p>
-            <strong>What is Min-K% Prob?</strong><br>
-            We propose a pretraining data detection method named Min-K% Prob. Our method is based on a simple
-            hypothesis: an unseen example tends to contain a few outlier words with low probabilities, whereas a seen
-            example is less likely to contain words with such low probabilities. MIN-K% Prob computes the average
-            probabilities of outlier tokens.
-          </p>
-
-          <p>
-            <strong>How to use Min-K% Prob?</strong><br>
-            To check if a text was in LLM's pretraining:
-          <ol>
-            <li>Evaluate token probabilities in the text.</li>
-            <li>Pick the k% tokens with minimum probabilities.</li>
-            <li>Compute their average log likelihood.</li>
-          </ol>
-          If the average log likelihood is high, the text is likely in the pretraining data. ✅
-          </p>
-
-<a href="https://arxiv.org/pdf/2310.16789.pdf" target="_blank">See more results in our paper</a>
+          <iframe width="647" height="364" src="https://www.youtube.com/embed/aln6E5x5TfM" title="Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs (video demo)" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
     </div>
@@ -290,212 +242,83 @@
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3" id="privacy-auditing">Auditing machine unlearning with Min-K% Prob</h2>
+        <h2 class="title is-3" id="privacy-auditing">A Taxonomical Ontology of Prompt Hacking techniques</h2>
         <div class="content has-text-justified">
           <p>
-            <strong>Machine Unlearning</strong><br>
-            <a href="https://www.microsoft.com/en-us/research/project/physics-of-agi/articles/whos-harry-potter-making-llms-forget-2/"> Recent work from MSR </a> shows how LLMs can unlearn copyrighted training data via strategic fine-tuning.
-            They made Llama2-7B-chat unlearn the entire Harry Potter magical world and released it as
-            <a href="https://huggingface.co/microsoft/Llama2-7b-WhoIsHarryPotter">Llama2-7B-WhoIsHarryPotter</a> for
-            scrutiny.
-            But with our Min-K% Prob technique, we've found that some “magical traces” still remain, producing Harry
-            Potter content! 🧙‍♂️🔮
+            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomy ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
           </p>
+          <img src="./static/images/ontology.png" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
           <p>
-            <img src="./static/images/unlearn_full.png"
-              alt="Graph depicting the process of unlearning Harry Potter content">
-          </p>
-          <p>
-            <strong> Auditing machine unlearning with Min-K% Prob </strong> <br>
-            The unlearned model LLaMA2-7B-WhoIsHarryPotter answers the questions related to Harry
-              Potter correctly. We manually cross-checked these responses against the Harry Potter book series
-            for verification.<br>
-            <img src="./static/images/unlearn_result.png" alt="Results showing the unlearned model's responses">
-          </p>
+            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
+an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
+Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+          </i></p>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-
-
-
 <section class="section">
   <div class="container is-max-desktop">
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <!-- <h2 class="title is-3" id="copyrighted-detection">Copyrighted Book Detection</h2> -->
-        <h2 class="title is-3" id="copyrighted-detection">Detecting Copyrighted Books in LLMs with Min-K% Prob</h2>
+        <h2 class="title is-3" id="privacy-auditing">Introducing the HackAPrompt Dataset</h2>
         <div class="content has-text-justified">
+          <p>
+            This dataset, comprising over 600,000 prompts, is split into two distinct collections: the Playground Dataset and the Submissions Dataset. The Playground Dataset provides a broad overview of the prompt hacking process through completely anonymous prompts tested on the interface, while the Submissions Dataset offers a more detailed insight with refined prompts submitted to the leaderboard, exhibiting a higher success rate of high-quality injections.
 
-        <!-- <title>Top 20 Copyrighted Books in GPT-3's (text-davinci-003) Pretraining Data detected by Min-K% Prob</title> -->
-        <style>
-          table {
-            width: 100%;
-            border-collapse: collapse;
-          }
+          </p><p>
+            The origin of this dataset was driven by the need to quantitatively study prompt injection and jailbreaking, phenomena collectively termed prompt hacking. Funded through a combination of prizes and compute support from various companies, the dataset was created without allegiance to any specific entity, ensuring its neutrality and focus on academic rigor.
+          </p><p>
+            Importantly, this dataset is not just an aggregation of prompts; it represents a conscientious effort to understand and mitigate risks associated with LLMs. By making this dataset publicly available, we aim to raise awareness about the potential risks and challenges posed by these models. We hope that this will prompt (no pun intended) a more responsible use and development of LLMs in various applications, safeguarding against misuse while harnessing their potential for innovation and progress.          </p>
+          </p><p>
+            The table below contains success rates and total distribution of prompts for the two datasets.
+          </p><table>
+              <thead>
+                  <tr>
+                      <th>&nbsp;</th> <!-- Empty header for the first column -->
+                      <th>Total Prompts</th>
+                      <th>Successful Prompts</th>
+                      <th>Success Rate</th>
+                  </tr>
+              </thead>
+              <tbody>
+                  <tr>
+                      <td>Submissions</td>
+                      <td>41,596</td>
+                      <td>34,641</td>
+                      <td style="color: green;">83.2%</td>
+                  </tr>
+                  <tr>
+                      <td>Playground</td>
+                      <td>560,161</td>
+                      <td>43,295</td>
+                      <td style="color: green;">7.7%</td>
+                  </tr>
+              </tbody>
+          </table>
+          
+          <p>
+            <i>Table 2: With a much higher success rate, the
+              Submissions Dataset dataset contains a denser quantity of high quality injections. In contract, Playground
+              Dataset is much larger and demonstrates competitor
+              exploration of the task.
+          </i></p>
+          
+          <!-- Dataset Link. -->
+          <span class="link-block">
+            <a href="https://huggingface.co/datasets/hackaprompt/hackaprompt-dataset"
+              class="external-link button is-normal is-rounded is-dark">
+              <span class="icon">
+                <i class="far fa-images"></i>
+              </span>
+              <span>HackAPrompt dataset</span>
+            </a>
+          </span>
 
-          table,
-          th,
-          td {
-            border: 1px solid black;
-          }
-
-          th,
-          td {
-            padding: 8px;
-            text-align: left;
-          }
-
-          th {
-            background-color: #f2f2f2;
-          }
-        </style>
-      </head>
-
-      <body>
-
-        <table>
-          <caption><b style="color: red;">Top 20 Copyrighted Books in GPT-3's pretraining data (text-davinci-003) detected by Min-K%
-            Prob</b> (Min-K% Prob achieves AUC score of 0.87 on the validation data). The listed contamination rate represents the
-            percentage of text excerpts from each book identified in the pretraining data.</caption>
-          <thead>
-            <tr>
-              <th>Contamination %</th>
-              <th>Book Title</th>
-              <th>Author</th>
-              <th>Year</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>100</td>
-              <td>The Violin of Auschwitz</td>
-              <td>Maria Àngels Anglada</td>
-              <td>2010</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>North American Stadiums</td>
-              <td>Grady Chambers</td>
-              <td>2018</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>White Chappell Scarlet Tracings</td>
-              <td>Iain Sinclair</td>
-              <td>1987</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>Lost and Found</td>
-              <td>Alan Dean</td>
-              <td>2001</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>A Different City</td>
-              <td>Tanith Lee</td>
-              <td>2015</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>Our Lady of the Forest</td>
-              <td>David Guterson</td>
-              <td>2003</td>
-            </tr>
-            <tr>
-              <td>100</td>
-              <td>The Expelled</td>
-              <td>Mois Benarroch</td>
-              <td>2013</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Blood Cursed</td>
-              <td>Archer Alex</td>
-              <td>2013</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Genesis Code: A Thriller of the Near Future</td>
-              <td>Jamie Metzl</td>
-              <td>2014</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Sleepwalker's Guide to Dancing</td>
-              <td>Mira Jacob</td>
-              <td>2014</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Harlan Ellison Hornbook</td>
-              <td>Harlan Ellison</td>
-              <td>1990</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Book of Freedom</td>
-              <td>Paul Selig</td>
-              <td>2018</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Three Strong Women</td>
-              <td>Marie NDiaye</td>
-              <td>2009</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Leadership Mind Switch: Rethinking How We Lead in the New World of Work</td>
-              <td>D. A. Benton, Kylie Wright-Ford</td>
-              <td>2017</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>Gold</td>
-              <td>Chris Cleave</td>
-              <td>2012</td>
-            </tr>
-            <tr>
-              <td>99</td>
-              <td>The Tower</td>
-              <td>Simon Clark</td>
-              <td>2005</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Amazon</td>
-              <td>Bruce Parry</td>
-              <td>2009</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Ain't It Time We Said Goodbye: The Rolling Stones on the Road to Exile</td>
-              <td>Robert Greenfield</td>
-              <td>2014</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Page One</td>
-              <td>David Folkenflik</td>
-              <td>2011</td>
-            </tr>
-            <tr>
-              <td>98</td>
-              <td>Road of Bones: The Siege of Kohima 1944</td>
-              <td>Fergal Keane</td>
-              <td>2010</td>
-            </tr>
-          </tbody>
-        </table>
-
-      </body>
-
-      </html>
-
+        </div>
+      </div>
     </div>
   </div>
 </section>
