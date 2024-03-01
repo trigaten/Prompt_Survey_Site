@@ -155,3 +155,10 @@ body {
 #interpolation-image-wrapper img {
   border-radius: 5px;
 }
+
+.svg {
+  background-color: red;
+  width: 100%;
+  height: calc(100vh);
+  overflow: hidden;
+}

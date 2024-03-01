@@ -33,6 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script type="module" src="./static/js/d3-zoom.js"></script>
 </head>
 
 <body>
@@ -355,6 +356,30 @@ Instruction). Purple nodes are not attacks themselves but can be a part of attac
   </div>
 </section>
 
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="privacy-auditing">The Prompt Report Dataset</h2>
+        <div class="content has-text-justified">
+          <p>
+            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomical ontology ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
+          </p>
+          <div class="svg">
+            <svg id="svg" width="100%" height="100%">
+                <image id="img" href="./static/images/papers_citations_graph.svg" alt="papers_citations_graph"/>
+            </svg>
+          </div>
+          <p>
+            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
+an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
+Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+          </i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
       <section class="section is-light" id="BibTeX">
         <div class="container is-max-desktop content">
