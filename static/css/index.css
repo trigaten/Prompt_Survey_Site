@@ -157,8 +157,8 @@ body {
 }
 
 .svg {
-  background-color: lightgrey;
-  padding: .5vh;
+  background-color: black;
+  padding: .1vh;
   width: 100%;
   height: calc(80vh);
   overflow: hidden;
