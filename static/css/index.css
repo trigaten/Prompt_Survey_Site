@@ -157,8 +157,13 @@ body {
 }
 
 .svg {
-  background-color: red;
+  background-color: lightgrey;
+  padding: .5vh;
   width: 100%;
-  height: calc(100vh);
+  height: calc(80vh);
   overflow: hidden;
+}
+
+#img {
+  width: 100%;
 }

@@ -33,6 +33,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <script src="./static/js/bulma-carousel.min.js"></script>
   <script src="./static/js/bulma-slider.min.js"></script>
   <script src="./static/js/index.js"></script>
+  <script src="https://d3js.org/d3.v4.min.js"></script>
   <script type="module" src="./static/js/d3-zoom.js"></script>
 </head>
 
@@ -179,7 +180,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
               <span class="author-block"><b style="color:#00d788; font-weight:normal">▶ </b><sup>6</sup> Vanderbilt</span>&nbsp &nbsp
               <span class="author-block"><b style="color:#d7006b; font-weight:normal">▶ </b><sup>7</sup> Princeton</span>&nbsp &nbsp
               <span class="author-block">&nbsp;&nbsp;<sup>*</sup>Equal Contribution</span>
-              <span class="author-block">&nbsp;&nbsp;<sup>**</sup>Competition Winners</span>
 
               <br>
               <span class="author-block">&nbsp;&nbsp;sschulho@umd.edu</span>
@@ -232,7 +232,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <div class="container is-max-desktop">
     <div class="hero-body">
       <h2 class="subtitle has-text-centered">
-        In this paper, we conduct a systematic survey of all generative AI prompting technqiues. We explain how all of them work, including multimodal, multilingual, and agents so that you can rapidly implement these techniques. 
+        In this paper, we conduct a systematic survey of all generative AI prompting technqiues. We combine human and machine efforts to process 4,797 records from arXiv and Semantic Scholar, extracting 1,646 relevant papers through the PRISMA review process. From this dataset we present 53 text-based techniques, complemented by an extensive collection of multimodal and multilingual techniques. Our goal is to provide an extensive directory of prompting techniques that can be easily understood and implemented. We also review agents as an extension of prompting, including methods for evaluating output and designing prompts that facilitate safety and security. Lastly, we apply prompting techniques in two case studies.
   
       </b>
   
@@ -267,13 +267,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="title is-3" id="privacy-auditing">The PRISMA Review Process</h2>
         <div class="content has-text-justified">
           <p>
-            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomical ontology ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
+            During paper collection, we followed a systematic review process grounded in the PRISMA method. We first scraped arXiv and Semantic Scholar through a keyword search. Our keyword list was comprised of 44 terms, with each being closely related to prompting and prompt engineering. We then deduplicated our datset based on paper titles, conducted extensive human and AI review for relevance, and automatically removed unrelated papers by checking paper bodies for the term "prompt".
           </p>
-          <img src="./static/images/PRISMA.png" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
+          <img src="./static/images/PRISMA.png" alt="PRISMA" style="margin-top: 40px;">
           <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+            <i>Figure 2.1: The PRISMA review process. We accumulate 3,353 unique records from which we extract 1,464
+              relevant records.
           </i></p>
         </div>
       </div>
@@ -288,25 +287,19 @@ Instruction). Purple nodes are not attacks themselves but can be a part of attac
         <h2 class="title is-3" id="privacy-auditing">A Taxonomical Ontology of Prompting Techniques</h2>
         <div class="content has-text-justified">
           <p>
-            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomical ontology ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
+            We present a comprehensive Taxonomical Ontology of prompting techniques, methods for instructing Large Language Models (LLMs) to complete tasks. We divide prompting techniques into three categories: text-based, multilingual, and multimodal. Multilingual techniques are used to prompt LLMs in non-English settings. Multimodal techniques are used when working with non-textual modalities such as image and audio.
           </p>
-          <img src="./static/images/text_ontology.PNG" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
-          <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+          <img src="./static/images/text_ontology.PNG" alt="text" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p style="text-align: center;">
+            <i>Figure 2.2: All text-based prompting techniques from our dataset.
           </i></p>
-          <img src="./static/images/multilingual.PNG" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
-          <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+          <img src="./static/images/multilingual.PNG" alt="multilingual" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p style="text-align: center;">
+            <i>Figure 3.1: All multilingual prompting techniques.
           </i></p>
-          <img src="./static/images/multimodal.png" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
-          <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+          <img src="./static/images/multimodal.png" alt="multimodal" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p style="text-align: center;">
+            <i>Figure 3.2: All multimodal prompting techniques.
           </i></p>
         </div>
       </div>
@@ -321,13 +314,11 @@ Instruction). Purple nodes are not attacks themselves but can be a part of attac
         <h2 class="title is-3" id="privacy-auditing">Case Study: MMLU Benchmarking</h2>
         <div class="content has-text-justified">
           <p>
-            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomical ontology ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
+            In our first case study, we benchmark six distinct prompting techniques using the MMLU benchmark. We also explore the impact of formatting on results, finding varied results between two different formats for each prompting technique. 
           </p>
-          <img src="./static/images/benchmarking.png" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
+          <img src="./static/images/benchmarking.png" alt="MMLU" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
           <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+            <i>Figure 6.1: Accuracy values are shown for each prompting technique. Purple error bars illustrate the minimum and maximum for each technique, since they were each ran on different phrasings (except SC) and formats.
           </i></p>
         </div>
       </div>
@@ -342,13 +333,11 @@ Instruction). Purple nodes are not attacks themselves but can be a part of attac
         <h2 class="title is-3" id="privacy-auditing">Case Study: Labelling for Suicide Crisis Syndrome (SCS)</h2>
         <div class="content has-text-justified">
           <p>
-            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomical ontology ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
+            In the second case study, we apply prompting techniques to the task of labelling reddit posts as indicative of <i>suicide crisis syndrome</i> (SCS). Through this case study, we aim to provide an example of the prompt engineering process in the context of a real world problem. We utilize the University of Maryland Reddit Suicidality Dataset and an expert prompt engineer, documenting the process in which they boost output accuracy from 0% to 55%.
           </p>
-          <img src="./static/images/entrapment_scores.png" alt="Taxonomical Ontology of Prompt Hacking" style="margin-top: 40px;">
-          <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+          <img src="./static/images/entrapment_scores.png" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p style="text-align: center;">
+            <i>Figure 6.2: Entrapment Scores
           </i></p>
         </div>
       </div>
@@ -363,17 +352,15 @@ Instruction). Purple nodes are not attacks themselves but can be a part of attac
         <h2 class="title is-3" id="privacy-auditing">The Prompt Report Dataset</h2>
         <div class="content has-text-justified">
           <p>
-            We present a comprehensive Taxonomical Ontology of Prompt Hacking techniques, which categorizes various methods used to manipulate Large Language Models (LLMs) through prompt hacking. This taxonomical ontology ranges from simple instructions and cognitive hacking to more complex techniques like context overflow, obfuscation, and code injection, offering a detailed insight into the diverse strategies used in prompt hacking attacks.
+            Our systematic review of all prompting techniques is based on the dataset of 1,464 relevant papers we collected. The dataset is available on Huggingface. We conducted several analyses of the dataset which can be found within the paper, including an analysis of citation counts for different GenAI models, prompting techniques, and datasets. For example, the following is a graph depicting connections between citations within the dataset.
           </p>
           <div class="svg">
             <svg id="svg" width="100%" height="100%">
-                <image id="img" href="./static/images/papers_citations_graph.svg" alt="papers_citations_graph"/>
+                <image id="img" href="./static/images/Papers_Citiations_Graph.png" alt="papers_citations_graph"/>
             </svg>
           </div>
           <p>
-            <i>Figure 5: A Taxonomical Ontology of Prompt Hacking techniques. Blank lines are hypernyms (i.e., typos are
-an instance of obfuscation), while grey arrows are meronyms (i.e., Special Case attacks usually contain a Simple
-Instruction). Purple nodes are not attacks themselves but can be a part of attacks. Red nodes are specific examples.
+            <i>Figure 2.7: A citation graph of our dataset identifying connections between papers. We collected a reference count of every paper in our dataset and created an adjacency matrix with edges only going to papers within our dataset.
           </i></p>
         </div>
       </div>
@@ -385,12 +372,8 @@ Instruction). Purple nodes are not attacks themselves but can be a part of attac
         <div class="container is-max-desktop content">
           <h2 class="title">BibTeX</h2>
           <pre><code>
-@inproceedings{Schulhoff:Pinto:Khan:Bouchard:Si:Boyd-Graber:Anati:Tagliabue:Kost:Carnahan-2023,
-  Title = {Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs Through a Global Prompt Hacking Competition},
-  Author = {Sander V Schulhoff and Jeremy Pinto and Anaum Khan and Louis-FranÃ§ois Bouchard and Chenglei Si and Jordan Lee Boyd-Graber and Svetlina Anati and Valen Tagliabue and Anson Liu Kost and Christopher R Carnahan},
-  Booktitle = {Empirical Methods in Natural Language Processing},
-  Year = {2023},
-  Location = {Singapore}
+@inproceedings{
+  [citation information here]
 }
   </code></pre>
         </div>
