@@ -1,15 +1,11 @@
-# HackAPrompt
+# ThePromptReport
 
-This is the official repository for the [HackAPrompt](https://trigaten.github.io/hackaprompt.github.io/HackAPrompt.pdf) paper.
+This is the official website repository for the paper: "The Prompt Report: A Systematic Survey of Prompting Techniques"
 
-If you find HackAPrompt useful for your work please cite:
+If you find The Prompt Report useful for your work please cite:
 ```
-@inproceedings{Schulhoff:Pinto:Khan:Bouchard:Si:Boyd-Graber:Anati:Tagliabue:Kost:Carnahan-2023,
-  Title = {Ignore This Title and HackAPrompt: Exposing Systemic Vulnerabilities of LLMs Through a Global Prompt Hacking Competition},
-  Author = {Sander V Schulhoff and Jeremy Pinto and Anaum Khan and Louis-FranÃ§ois Bouchard and Chenglei Si and Jordan Lee Boyd-Graber and Svetlina Anati and Valen Tagliabue and Anson Liu Kost and Christopher R Carnahan},
-  Booktitle = {Empirical Methods in Natural Language Processing},
-  Year = {2023},
-  Location = {Singapore}
+@inproceedings{
+  [citation here]
 }
 ```
 
