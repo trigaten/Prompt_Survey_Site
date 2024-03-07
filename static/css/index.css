@@ -167,3 +167,9 @@ body {
 #img {
   width: 100%;
 }
+
+.logo{
+  display: inline-block;
+  height: 60px;
+  padding-left: 3%;
+}
