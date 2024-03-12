@@ -173,3 +173,25 @@ body {
   height: 60px;
   padding-left: 3%;
 }
+
+#CSVTable{
+  height: 600px; 
+  width: 1000px;
+}
+
+#table-container{
+  overflow-x: auto;
+  overflow-y: auto;
+}
+
+.even{
+  background-color: #F6F6F6;
+}
+
+table{
+  table-layout: fixed;
+}
+
+td{
+  word-wrap:break-word
+}

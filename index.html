@@ -27,14 +27,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
   <link rel="stylesheet" href="./static/css/index.css">
   <link rel="icon" href="./static/images/tifa.png">
-
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script defer src="./static/js/fontawesome.all.min.js"></script>
-  <script src="./static/js/bulma-carousel.min.js"></script>
-  <script src="./static/js/bulma-slider.min.js"></script>
-  <script src="./static/js/index.js"></script>
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script type="module" src="./static/js/d3-zoom.js"></script>
 </head>
 
 <body>
@@ -370,7 +362,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="title is-3" id="privacy-auditing">The Prompt Report Dataset</h2>
         <div class="content has-text-justified">
           <p>
-            Our systematic review of all prompting techniques is based on the dataset of 1,464 relevant papers we collected. The dataset is available on Huggingface. We conducted several analyses of the dataset which can be found within the paper, including an analysis of citation counts for different GenAI models, prompting techniques, and datasets. For example, the following is a graph depicting connections between citations within the dataset.
+            Our systematic review of all prompting techniques is based on the dataset of 1,464 relevant papers we collected. Below is a preview of the dataset. Specific columns, such as 'abstract', have been excluded. The full dataset is available on Huggingface, including the complete CSV file and all paper PDFs.
+          </p>
+          <div id="table-container">
+            <div id="CSVTable"></div>
+          </div>
+
+          <br>
+          <br>
+          <p>
+            We conducted several analyses of the dataset which can be found within the paper, including an analysis of citation counts for different GenAI models, prompting techniques, and datasets. For example, the following is a graph depicting connections between citations within the dataset.
           </p>
           <div class="svg">
             <svg id="svg" width="100%" height="100%">
@@ -424,6 +425,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </footer>
 
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script defer src="./static/js/fontawesome.all.min.js"></script>
+      <script src="./static/js/bulma-carousel.min.js"></script>
+      <script src="./static/js/bulma-slider.min.js"></script>
+      <script src="./static/js/index.js"></script>
+      <script src="https://d3js.org/d3.v4.min.js"></script>
+      <script type="module" src="./static/js/d3-zoom.js"></script>
+      <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>  
+      <script src="https://storage.googleapis.com/google-code-archive-downloads/v2/code.google.com/jquerycsvtotable/jquery.csvToTable.js"></script>
 </body>
 
 </html>
