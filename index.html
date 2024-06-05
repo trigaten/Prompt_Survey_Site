@@ -293,7 +293,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
           <br>
           <p style="text-align: center;">
-            <i>Figure 2.1: The PRISMA review process. We accumulate 4,247 unique records from which we extract 1,565
+            <i>The PRISMA review process. We accumulate 4,247 unique records from which we extract 1,565
               relevant records.
           </i></p>
         </div>
@@ -315,20 +315,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           
           <br>
           <p style="text-align: center;">
-            <i>Figure 2.2: All text-based prompting techniques from our dataset.
+            <i>All text-based prompting techniques from our dataset.
           </i></p>
           <img src="./static/images/multilingual.png" alt="multilingual" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
 
           <br>
           <p style="text-align: center;">
-            <i>Figure 3.1: All multilingual prompting techniques.
+            <i>All multilingual prompting techniques.
           </i></p>
           <img src="./static/images/multimodal.png" alt="multimodal" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
 
           <br>
           <p style="text-align: center;">
-            <i>Figure 3.2: All multimodal prompting techniques.
+            <i>All multimodal prompting techniques.
           </i></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container is-max-desktop">
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-four-fifths">
+        <h2 class="title is-3" id="privacy-auditing">Prompt Exploration and Advice</h2>
+        <div class="content has-text-justified">
+          <p>
+            We discussed various prompting terms including prompt engineering, answer engineering, and few-shot prompting.
+          </p>
+          <img src="./static/images/pe_process.pdf" alt="MMLU" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p>
+            <emph>The Prompt Engineering Process consists of three repeated steps 1) performing inference on a dataset 2) evaluating performance and 3) modifying the prompt template. Note that the extractor is used to extract a final response from the LLM output (e.g. "This phrase is positive" maps to"positive").</emph>
+          </p>
+          <img src="./static/images/answer.pdf" alt="MMLU" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p>
+            <emph>An annotated output of a LLM output for a labeling task, which shows the three design decisions of answer engineering: the choice of answer shape, space, and extractor. Since this is an output from a classification task, the answer shape could be restricted to a single token and the answer space to one of two tokens ("positive" or "negative"), though they are unrestricted in this image.</emph>
+          </p>
+          <img src="./static/images/fewshot_advice.pdf" alt="MMLU" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p>
+            <emph>We highlight six main design decisions when crafting few-shot prompts. *Please note that recommendations here do not generalize to all tasks; in some cases, each of them could hurt performance.</emph>
+          </p>
+          
         </div>
       </div>
     </div>
@@ -346,7 +374,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           </p>
           <img src="./static/images/benchmarking.pdf" alt="MMLU" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
           <p>
-            <i>Figure 6.1: Accuracy values are shown for each prompting technique. Purple error bars illustrate the minimum and maximum for each technique, since they were each ran on different phrasings (except SC) and formats.
+            <i>Accuracy values are shown for each prompting technique. Purple error bars illustrate the minimum and maximum for each technique, since they were each ran on different phrasings (except SC) and formats.
           </i></p>
         </div>
       </div>
@@ -361,12 +389,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         <h2 class="title is-3" id="privacy-auditing">Case Study: Labelling for Suicide Crisis Syndrome (SCS)</h2>
         <div class="content has-text-justified">
           <p>
-            In the second case study, we apply prompting techniques to the task of labelling reddit posts as indicative of <i>suicide crisis syndrome</i> (SCS). Through this case study, we aim to provide an example of the prompt engineering process in the context of a real world problem. We utilize the University of Maryland Reddit Suicidality Dataset and an expert prompt engineer, documenting the process in which they boost output accuracy from 0% to 55%.
+            In the second case study, we apply prompting techniques to the task of labelling reddit posts as indicative of <i>suicide crisis syndrome</i> (SCS). Through this case study, we aim to provide an example of the prompt engineering process in the context of a real world problem. We utilize the University of Maryland Reddit Suicidality Dataset and an expert prompt engineer, documenting the process in which they boost F1 score from 0 to 0.53.
           </p>
           <img src="./static/images/entrapment_scores.pdf" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
           <p style="text-align: center;">
-            <i>Figure 6.2: Entrapment Scores
-          </i></p>
+            <emph>Entrapment Scores of different prompting techniques.</emph>
+          </p>
+
+          <img src="./static/images/entrapment_f1s_only.pdf" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p style="text-align: center;">
+            <emph>Entrapment Scores of different prompting techniques, graphed as the prompt engineer develops them over time.</emph>
+          </p>
+
+          <img src="./static/images/entrapment_test_dspy.pdf" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+          <p style="text-align: center;">
+            <emph>Automated techniques (DSPy) were able to defeat our human prompt engineer.</emph>
+          </p>
+          
         </div>
       </div>
     </div>
@@ -389,18 +428,25 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <br>
           <br>
           <p>
-            We conducted several analyses of the dataset which can be found within the paper, including an analysis of citation counts for different GenAI models, prompting techniques, and datasets. For example, the following is a graph depicting connections between citations within the dataset.
+            We conducted several analyses of the dataset which can be found within the paper, including an analysis of citation counts for different GenAI models, prompting techniques, and datasets. 
           </p>
-          <div class="svg">
-            <svg id="svg" width="100%" height="100%">
-                <image id="img" href="./static/images/Papers_Citiations_Graph.png" alt="papers_citations_graph"/>
-            </svg>
-          </div>
-
+            <img src="./static/images/models_citation_counts.pdf" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
           <br>
-          <p>
-            <i>Figure 2.7: A citation graph of our dataset identifying connections between papers. We collected a reference count of every paper in our dataset and created an adjacency matrix with edges only going to papers within our dataset.
-          </i></p>
+          <p style="text-align: center;">
+            <emph>How often different models were used (cited) by papers in our dataset.</emph>
+          </p>
+
+        </p>
+        <img src="./static/images/graph_dataset_mentions_output.pdf" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+      <br>
+      <p style="text-align: center;">
+        <emph>How often different benchmarking datasets were used (cited) by papers in our dataset.</emph>
+      </p>
+        </p>
+        <img src="./static/images/internal_references.pdf" alt="Taxonomical Ontology of Prompt Hacking" style="display: block; margin-top: 40px; margin-left: auto; margin-right: auto;">
+      <br>
+      <p style="text-align: center;">
+        <emph>How often papers within our dataset were cited by other papers within our dataset.</emph></p>
         </div>
       </div>
     </div>
